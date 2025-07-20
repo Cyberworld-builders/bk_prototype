@@ -17,20 +17,20 @@ export default function Home() {
             />
           </div>
           <h1 className="text-4xl font-bold text-blue-900 mb-4">BK Assistant Prototype</h1>
-          <p className="text-lg text-gray-600 mb-8">
+          <p className="text-lg text-gray-700 mb-8 font-medium">
             Bankruptcy Case Management System - Property Questionnaire Demo
           </p>
         </div>
 
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 max-w-2xl">
-          <h2 className="text-xl font-semibold text-blue-900 mb-3">Property Questionnaire System</h2>
-          <p className="text-gray-700 mb-4">
+          <h2 className="text-xl font-bold text-blue-900 mb-3">Property Questionnaire System</h2>
+          <p className="text-gray-800 mb-4 font-medium">
             Experience the improved UX for the 7-step property disclosure process. This demo showcases 
             the recommendations from the technical analysis, converted to modern React and Tailwind CSS.
           </p>
           <Link 
             href="/property-questionnaire"
-            className="inline-block bg-blue-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-800 transition-colors"
+            className="inline-block bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors"
           >
             Launch Property Questionnaire Demo →
           </Link>

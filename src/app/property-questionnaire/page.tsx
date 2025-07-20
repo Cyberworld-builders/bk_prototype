@@ -72,24 +72,24 @@ export default function PropertyQuestionnaire() {
 
   const StepNavigation = () => (
     <div className="w-64 bg-white p-5 border-r border-slate-200 h-screen fixed">
-      <h2 className="text-lg font-semibold text-blue-900 mb-5">Questionnaire</h2>
+      <h2 className="text-lg font-bold text-blue-900 mb-5">Questionnaire</h2>
       <ul className="space-y-1">
         {steps.map((step) => (
           <li
             key={step.id}
             onClick={() => navigateToStep(step.id)}
             className={`
-              p-2.5 cursor-pointer rounded transition-colors
+              p-2.5 cursor-pointer rounded transition-colors font-medium
               ${currentStep === step.id 
-                ? 'bg-blue-200 font-semibold' 
-                : 'hover:bg-blue-50'
+                ? 'bg-blue-200 font-bold text-blue-900' 
+                : 'hover:bg-blue-50 text-gray-800'
               }
-              ${step.completed ? 'text-green-700' : ''}
+              ${step.completed ? 'text-green-700 font-semibold' : ''}
             `}
           >
             <div className="flex items-center justify-between">
-              <span>{step.name}</span>
-              {step.completed && <span className="text-green-600">✓</span>}
+              <span className="font-medium">{step.name}</span>
+              {step.completed && <span className="text-green-600 font-bold">✓</span>}
             </div>
           </li>
         ))}
@@ -107,7 +107,7 @@ export default function PropertyQuestionnaire() {
         priority
         className="h-12 w-auto"
       />
-      <div className="text-sm text-gray-600">
+      <div className="text-sm text-gray-800 font-medium">
         Progress: {overallProgress}%
         <div className="w-32 h-1.5 bg-blue-100 rounded-full mt-2 overflow-hidden">
           <div 
@@ -127,7 +127,7 @@ export default function PropertyQuestionnaire() {
 
   const FormGroup = ({ label, children }: { label: string, children: React.ReactNode }) => (
     <div className="mb-5">
-      <label className="block mb-2 font-medium text-gray-700">{label}</label>
+      <label className="block mb-2 font-semibold text-gray-800">{label}</label>
       {children}
     </div>
   )
@@ -153,7 +153,7 @@ export default function PropertyQuestionnaire() {
     <button
       onClick={onClick}
       className={`
-        px-5 py-2.5 rounded font-medium transition-colors
+        px-5 py-2.5 rounded font-semibold transition-colors
         ${variant === 'primary' 
           ? 'bg-blue-900 text-white hover:bg-blue-800' 
           : 'bg-gray-600 text-white hover:bg-gray-700'
@@ -166,7 +166,7 @@ export default function PropertyQuestionnaire() {
   )
 
   const Alert = ({ children }: { children: React.ReactNode }) => (
-    <div className="bg-blue-50 border border-blue-200 text-blue-800 p-4 rounded-lg mb-5">
+    <div className="bg-blue-50 border border-blue-200 text-blue-900 p-4 rounded-lg mb-5 font-medium">
       {children}
     </div>
   )
@@ -487,7 +487,7 @@ export default function PropertyQuestionnaire() {
   }
 
   return (
-    <div className="flex min-h-screen bg-cyan-50">
+    <div className="flex min-h-screen bg-cyan-50 font-medium">
       <StepNavigation />
       <div className="ml-64 p-10 flex-1">
         <Header />

@@ -70,7 +70,14 @@ This demo implements the improved UX recommendations from the Client Property Qu
    - Hover effects for better discoverability
    - Consistent button styling and behavior
 
-4. **Modern Design Patterns**
+4. **Enhanced Readability & Typography**
+   - **Bold sidebar navigation** (`font-bold`) for better visibility
+   - **Semibold form labels** (`font-semibold`) for clear hierarchy  
+   - **Medium base font weight** throughout the application
+   - **High contrast colors** (darker grays and blues)
+   - **Professional typography** with consistent weight distribution
+
+5. **Modern Design Patterns**
    - Card-based layout for property items
    - Clean typography with proper contrast
    - Responsive spacing and layout
@@ -104,6 +111,7 @@ PropertyQuestionnaire (Main Component)
 3. **Interactivity**: Replaced jQuery with React state management
 4. **Components**: Modular React components vs monolithic templates
 5. **TypeScript**: Added type safety throughout the application
+6. **Enhanced Typography**: Improved font weights and contrast for better readability
 
 ### Demo Access
 
