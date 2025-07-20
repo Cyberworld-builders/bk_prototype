@@ -99,9 +99,14 @@ export default function PropertyQuestionnaire() {
 
   const Header = () => (
     <div className="flex items-center justify-between mb-8">
-      <div className="bg-gray-200 px-4 py-2 rounded text-gray-600">
-        BK Assistant Logo
-      </div>
+      <Image
+        src="/bk_logo.png"
+        alt="BK Assistant Logo"
+        width={150}
+        height={60}
+        priority
+        className="h-12 w-auto"
+      />
       <div className="text-sm text-gray-600">
         Progress: {overallProgress}%
         <div className="w-32 h-1.5 bg-blue-100 rounded-full mt-2 overflow-hidden">
