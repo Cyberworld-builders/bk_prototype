@@ -110,6 +110,13 @@ PropertyQuestionnaire (Main Component)
 - **Home Page**: `http://localhost:3000`
 - **Property Questionnaire**: `http://localhost:3000/property-questionnaire`
 
+### Logo Integration
+
+✅ **Real BK Assistant Logo**: The actual `bk_logo.png` has been integrated into both pages:
+- **Home page**: Features the logo prominently at the top with responsive sizing
+- **Property questionnaire**: Shows the logo in the header for brand consistency
+- **Next.js optimization**: Logo is automatically optimized for different screen sizes and formats
+
 ### Future Enhancements
 
 The demo provides a foundation for implementing the advanced features suggested in the analysis:
