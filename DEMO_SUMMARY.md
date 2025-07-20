@@ -74,7 +74,11 @@ This demo implements the improved UX recommendations from the Client Property Qu
    - **Bold sidebar navigation** (`font-bold`) for better visibility
    - **Semibold form labels** (`font-semibold`) for clear hierarchy  
    - **Medium base font weight** throughout the application
-   - **High contrast colors** (darker grays and blues)
+   - **High contrast form fields** (`text-gray-900`, `font-medium`) for easy reading
+   - **Enhanced input/select styling** with darker text and proper placeholder contrast
+   - **Fixed className merging** in Input component to preserve styling with custom classes (VIN field fix)
+   - **Bold step headings** (`font-bold`) for clear section identification
+   - **Improved button contrast** with darker secondary button backgrounds
    - **Professional typography** with consistent weight distribution
 
 5. **Modern Design Patterns**

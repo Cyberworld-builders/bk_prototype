@@ -120,7 +120,7 @@ export default function PropertyQuestionnaire() {
   )
 
   const PropertyCard = ({ children, className = '' }: { children: React.ReactNode, className?: string }) => (
-    <div className={`bg-white border border-gray-200 rounded-lg p-4 mb-4 ${className}`}>
+    <div className={`bg-white border border-gray-200 rounded-lg p-4 mb-4 font-medium ${className}`}>
       {children}
     </div>
   )
@@ -134,7 +134,7 @@ export default function PropertyQuestionnaire() {
 
   const Select = ({ children, onChange, ...props }: any) => (
     <select 
-      className="w-full p-2.5 border border-gray-300 rounded bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      className="w-full p-2.5 border border-gray-300 rounded bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 font-medium [&>option]:text-gray-900 [&>option]:font-medium [&>option:first-child]:text-gray-500"
       onChange={onChange}
       {...props}
     >
@@ -142,9 +142,9 @@ export default function PropertyQuestionnaire() {
     </select>
   )
 
-  const Input = (props: any) => (
+  const Input = ({ className, ...props }: any) => (
     <input 
-      className="w-full p-2.5 border border-gray-300 rounded bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      className={`w-full p-2.5 border border-gray-300 rounded bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 font-medium placeholder:text-gray-500 placeholder:font-normal ${className || ''}`}
       {...props}
     />
   )
@@ -156,7 +156,7 @@ export default function PropertyQuestionnaire() {
         px-5 py-2.5 rounded font-semibold transition-colors
         ${variant === 'primary' 
           ? 'bg-blue-900 text-white hover:bg-blue-800' 
-          : 'bg-gray-600 text-white hover:bg-gray-700'
+          : 'bg-gray-700 text-white hover:bg-gray-800'
         }
       `}
       {...props}
@@ -176,30 +176,30 @@ export default function PropertyQuestionnaire() {
       case 1:
         return (
           <div>
-            <h1 className="text-2xl font-semibold text-blue-900 mb-5">Real Property</h1>
+            <h1 className="text-2xl font-bold text-blue-900 mb-5">Real Property</h1>
             <Alert>
               List all residences, buildings, land, or other real estate you own. Include properties outside the US or not in your bankruptcy case.
             </Alert>
             <FormGroup label="Do you own or rent your current residence?">
               <Select onChange={(e: any) => handleResidenceChange(e.target.value)}>
-                <option value="">Select...</option>
-                <option value="own">Own</option>
-                <option value="rent">Rent</option>
+                <option value="" className="text-gray-500">Select...</option>
+                <option value="own" className="text-gray-900">Own</option>
+                <option value="rent" className="text-gray-900">Rent</option>
               </Select>
             </FormGroup>
             {showPropertyDetails && (
               <PropertyCard>
                 <FormGroup label="Property Type">
                   <Select>
-                    <option value="">Select type...</option>
-                    <option>Single Family Home</option>
-                    <option>Duplex/Multi-unit</option>
-                    <option>Condominium</option>
-                    <option>Manufactured Home</option>
-                    <option>Land</option>
-                    <option>Investment Property</option>
-                    <option>Timeshare</option>
-                    <option>Other</option>
+                                         <option value="" className="text-gray-500">Select type...</option>
+                                          <option className="text-gray-900">Single Family Home</option>
+                      <option className="text-gray-900">Duplex/Multi-unit</option>
+                      <option className="text-gray-900">Condominium</option>
+                      <option className="text-gray-900">Manufactured Home</option>
+                      <option className="text-gray-900">Land</option>
+                      <option className="text-gray-900">Investment Property</option>
+                      <option className="text-gray-900">Timeshare</option>
+                      <option className="text-gray-900">Other</option>
                   </Select>
                 </FormGroup>
                 <FormGroup label="Address">
@@ -217,7 +217,7 @@ export default function PropertyQuestionnaire() {
       case 2:
         return (
           <div>
-            <h1 className="text-2xl font-semibold text-blue-900 mb-5">Vehicles</h1>
+            <h1 className="text-2xl font-bold text-blue-900 mb-5">Vehicles</h1>
             <Alert>
               List all vehicles you own or possess (use for transportation), even if not on title. Include cars, trucks, motorcycles, RVs, etc.
             </Alert>
@@ -267,7 +267,7 @@ export default function PropertyQuestionnaire() {
       case 3:
         return (
           <div>
-            <h1 className="text-2xl font-semibold text-blue-900 mb-5">Personal and Household Items</h1>
+            <h1 className="text-2xl font-bold text-blue-900 mb-5">Personal and Household Items</h1>
             <Alert>
               List all household goods, furnishings, electronics, etc. Be thorough, even for low-value items.
             </Alert>
@@ -310,7 +310,7 @@ export default function PropertyQuestionnaire() {
       case 4:
         return (
           <div>
-            <h1 className="text-2xl font-semibold text-blue-900 mb-5">Financial Assets (Part 1)</h1>
+            <h1 className="text-2xl font-bold text-blue-900 mb-5">Financial Assets (Part 1)</h1>
             <Alert>
               List bank accounts, investments, retirement accounts, etc.
             </Alert>
@@ -356,7 +356,7 @@ export default function PropertyQuestionnaire() {
       case 5:
         return (
           <div>
-            <h1 className="text-2xl font-semibold text-blue-900 mb-5">Financial Assets (Part 2)</h1>
+            <h1 className="text-2xl font-bold text-blue-900 mb-5">Financial Assets (Part 2)</h1>
             <Alert>
               List insurance policies, tax refunds, legal claims, etc.
             </Alert>
@@ -399,7 +399,7 @@ export default function PropertyQuestionnaire() {
       case 6:
         return (
           <div>
-            <h1 className="text-2xl font-semibold text-blue-900 mb-5">Business-Related Assets</h1>
+            <h1 className="text-2xl font-bold text-blue-900 mb-5">Business-Related Assets</h1>
             <Alert>
               List business equipment, inventory, intellectual property, etc.
             </Alert>
@@ -441,7 +441,7 @@ export default function PropertyQuestionnaire() {
       case 7:
         return (
           <div>
-            <h1 className="text-2xl font-semibold text-blue-900 mb-5">Farm and Commercial Fishing Property</h1>
+            <h1 className="text-2xl font-bold text-blue-900 mb-5">Farm and Commercial Fishing Property</h1>
             <Alert>
               List farm equipment, livestock, crops, fishing boats, licenses, etc.
             </Alert>
