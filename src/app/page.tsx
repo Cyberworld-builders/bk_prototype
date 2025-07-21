@@ -43,12 +43,12 @@ export default function Home() {
               Property Questionnaire Demos
             </h2>
             <p className="text-lg text-gray-600">
-              Compare different UX approaches for the 7-step property disclosure process
+              Compare three distinct UX approaches for the 7-step property disclosure process
             </p>
           </div>
 
           {/* Demo Comparison Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
             {/* Version 1 - Sidebar Navigation */}
             <div className="bg-white border border-gray-200 rounded-lg p-6 md:p-8 shadow-sm">
               <div className="mb-4">
@@ -124,16 +124,54 @@ export default function Home() {
                 Launch Wizard Demo →
               </Link>
             </div>
+
+            {/* Version 3 - Dashboard Overview */}
+            <div className="bg-white border border-gray-200 rounded-lg p-6 md:p-8 shadow-sm">
+              <div className="mb-4">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-800">
+                    Dashboard Overview
+                  </h3>
+                  <span className="px-3 py-1 bg-slate-100 text-slate-800 text-sm font-medium rounded-full">
+                    Version 3
+                  </span>
+                </div>
+                <p className="text-gray-800 mb-4 font-medium leading-relaxed">
+                  Modern dashboard approach showing all asset categories at once with summary metrics. 
+                  Click-to-drill-down interface with real-time progress tracking.
+                </p>
+                <div className="space-y-2 text-sm text-gray-600 mb-6">
+                  <div className="flex items-center">
+                    <span className="w-2 h-2 bg-slate-500 rounded-full mr-2"></span>
+                    All-in-one dashboard view
+                  </div>
+                  <div className="flex items-center">
+                    <span className="w-2 h-2 bg-slate-500 rounded-full mr-2"></span>
+                    Live summary statistics
+                  </div>
+                  <div className="flex items-center">
+                    <span className="w-2 h-2 bg-slate-500 rounded-full mr-2"></span>
+                    Modal-based detailed forms
+                  </div>
+                </div>
+              </div>
+              <Link 
+                href="/property-questionnaire-v3"
+                className="inline-block w-full bg-slate-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-800 transition-colors text-center min-h-[44px] flex items-center justify-center"
+              >
+                Launch Dashboard Demo →
+              </Link>
+            </div>
           </div>
 
           {/* Comparison Notes */}
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 md:p-8">
             <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4">
-              🔍 UX Comparison Notes
+              🔍 UX Approach Comparison
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
-                <h4 className="font-semibold text-gray-800 mb-3">Sidebar Navigation Benefits</h4>
+                <h4 className="font-semibold text-gray-800 mb-3">Sidebar Navigation</h4>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li>• Familiar desktop application pattern</li>
                   <li>• Quick navigation between any step</li>
@@ -142,12 +180,21 @@ export default function Home() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-800 mb-3">Wizard Style Benefits</h4>
+                <h4 className="font-semibold text-gray-800 mb-3">Guided Wizard</h4>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li>• Clear linear progression</li>
                   <li>• Less cognitive load per step</li>
                   <li>• Better mobile experience</li>
                   <li>• Visual guidance and feedback</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-800 mb-3">Dashboard Overview</h4>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>• Complete overview at a glance</li>
+                  <li>• Real-time progress metrics</li>
+                  <li>• Flexible completion order</li>
+                  <li>• Modern enterprise UI patterns</li>
                 </ul>
               </div>
             </div>
