@@ -1,0 +1,15 @@
+services:
+  bk-demo:
+    image: node:20-alpine
+    command: sh -c "npm install && npm run dev"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=development
+      - NEXT_TELEMETRY_DISABLED=1
+      - CHOKIDAR_USEPOLLING=true
+      - PORT=3011
+    ports:
+      - "3011:3011" 
