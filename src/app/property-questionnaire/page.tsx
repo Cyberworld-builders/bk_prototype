@@ -36,7 +36,6 @@ export default function PropertyQuestionnaire() {
   const [showFinancial2Form, setShowFinancial2Form] = useState(false)
   const [showBusinessForm, setShowBusinessForm] = useState(false)
   const [showFarmForm, setShowFarmForm] = useState(false)
-  const [propertyItems, setPropertyItems] = useState<PropertyItem[]>([])
 
   const overallProgress = Math.round((steps.filter(s => s.completed).length / steps.length) * 100)
 
@@ -56,15 +55,7 @@ export default function PropertyQuestionnaire() {
     }
   }
 
-  const addPropertyItem = (type: string) => {
-    const newItem: PropertyItem = {
-      id: Date.now().toString(),
-      type,
-      description: '',
-      value: ''
-    }
-    setPropertyItems(prev => [...prev, newItem])
-  }
+  // addPropertyItem function removed for prototype - not currently used
 
   const handleResidenceChange = (value: string) => {
     setShowPropertyDetails(value === 'own')
@@ -253,7 +244,7 @@ export default function PropertyQuestionnaire() {
                     <Input type="number" placeholder="Enter value" />
                   </FormGroup>
                 </PropertyCard>
-                <Button variant="secondary" onClick={() => addPropertyItem('vehicle')}>
+                <Button variant="secondary" onClick={() => alert('Add Another Vehicle - Feature coming soon')}>
                   Add Another Vehicle
                 </Button>
               </div>
@@ -296,7 +287,7 @@ export default function PropertyQuestionnaire() {
                     <Input type="number" placeholder="Enter value" />
                   </FormGroup>
                 </PropertyCard>
-                <Button variant="secondary" onClick={() => addPropertyItem('household')}>
+                <Button variant="secondary" onClick={() => alert('Add Another Item - Feature coming soon')}>
                   Add Another Item
                 </Button>
               </div>
@@ -342,7 +333,7 @@ export default function PropertyQuestionnaire() {
                     <Input type="number" placeholder="Enter balance" />
                   </FormGroup>
                 </PropertyCard>
-                <Button variant="secondary" onClick={() => addPropertyItem('financial1')}>
+                <Button variant="secondary" onClick={() => alert('Add Another Asset - Feature coming soon')}>
                   Add Another Asset
                 </Button>
               </div>
@@ -385,7 +376,7 @@ export default function PropertyQuestionnaire() {
                     <Input type="number" placeholder="Enter value" />
                   </FormGroup>
                 </PropertyCard>
-                <Button variant="secondary" onClick={() => addPropertyItem('financial2')}>
+                <Button variant="secondary" onClick={() => alert('Add Another Asset - Feature coming soon')}>
                   Add Another Asset
                 </Button>
               </div>
@@ -427,7 +418,7 @@ export default function PropertyQuestionnaire() {
                     <Input type="number" placeholder="Enter value" />
                   </FormGroup>
                 </PropertyCard>
-                <Button variant="secondary" onClick={() => addPropertyItem('business')}>
+                <Button variant="secondary" onClick={() => alert('Add Another Asset - Feature coming soon')}>
                   Add Another Asset
                 </Button>
               </div>
@@ -470,7 +461,7 @@ export default function PropertyQuestionnaire() {
                     <Input type="number" placeholder="Enter value" />
                   </FormGroup>
                 </PropertyCard>
-                <Button variant="secondary" onClick={() => addPropertyItem('farm')}>
+                <Button variant="secondary" onClick={() => alert('Add Another Asset - Feature coming soon')}>
                   Add Another Asset
                 </Button>
               </div>
