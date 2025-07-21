@@ -37,40 +37,118 @@ export default function Home() {
 
         {/* Demo Cards */}
         <div className="grid gap-6 md:gap-8">
-          {/* Property Questionnaire Demo */}
-          <div className="bg-white border border-gray-200 rounded-lg p-6 md:p-8 shadow-sm">
-            <div className="flex items-start justify-between flex-col md:flex-row gap-4">
-              <div className="flex-1">
-                <h2 className="text-xl md:text-2xl font-bold text-blue-900 mb-3">
-                  Property Questionnaire System
-                </h2>
+          {/* Demo Options Header */}
+          <div className="text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              Property Questionnaire Demos
+            </h2>
+            <p className="text-lg text-gray-600">
+              Compare different UX approaches for the 7-step property disclosure process
+            </p>
+          </div>
+
+          {/* Demo Comparison Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+            {/* Version 1 - Sidebar Navigation */}
+            <div className="bg-white border border-gray-200 rounded-lg p-6 md:p-8 shadow-sm">
+              <div className="mb-4">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-xl md:text-2xl font-bold text-blue-900">
+                    Sidebar Navigation
+                  </h3>
+                  <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
+                    Version 1
+                  </span>
+                </div>
                 <p className="text-gray-800 mb-4 font-medium leading-relaxed">
-                  Experience the improved UX for the 7-step property disclosure process. This demo showcases 
-                  the recommendations from the technical analysis, converted to modern React with responsive 
-                  design and enhanced usability.
+                  Traditional sidebar approach with persistent navigation and step overview. 
+                  Familiar desktop-style interface optimized for efficiency.
                 </p>
                 <div className="space-y-2 text-sm text-gray-600 mb-6">
                   <div className="flex items-center">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                    Mobile-responsive design
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                    Fixed sidebar navigation
                   </div>
                   <div className="flex items-center">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                    Progressive disclosure UX patterns
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                    Always-visible progress tracking
                   </div>
                   <div className="flex items-center">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                    Enhanced form validation and accessibility
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                    Professional form styling
                   </div>
                 </div>
               </div>
-              <div className="flex-shrink-0 w-full md:w-auto">
-                <Link 
-                  href="/property-questionnaire"
-                  className="inline-block w-full md:w-auto bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors text-center min-h-[44px] flex items-center justify-center"
-                >
-                  Launch Demo →
-                </Link>
+              <Link 
+                href="/property-questionnaire"
+                className="inline-block w-full bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors text-center min-h-[44px] flex items-center justify-center"
+              >
+                Launch Sidebar Demo →
+              </Link>
+            </div>
+
+            {/* Version 2 - Wizard Style */}
+            <div className="bg-white border border-gray-200 rounded-lg p-6 md:p-8 shadow-sm">
+              <div className="mb-4">
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-xl md:text-2xl font-bold text-emerald-800">
+                    Guided Wizard
+                  </h3>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-800 text-sm font-medium rounded-full">
+                    Version 2
+                  </span>
+                </div>
+                <p className="text-gray-800 mb-4 font-medium leading-relaxed">
+                  Modern wizard-style workflow with breadcrumb navigation and visual guidance. 
+                  Step-by-step approach with enhanced visual feedback.
+                </p>
+                <div className="space-y-2 text-sm text-gray-600 mb-6">
+                  <div className="flex items-center">
+                    <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
+                    Breadcrumb progression
+                  </div>
+                  <div className="flex items-center">
+                    <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
+                    Visual step indicators with icons
+                  </div>
+                  <div className="flex items-center">
+                    <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
+                    Modern card-based design
+                  </div>
+                </div>
+              </div>
+              <Link 
+                href="/property-questionnaire-v2"
+                className="inline-block w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-emerald-700 hover:to-teal-700 transition-all text-center min-h-[44px] flex items-center justify-center"
+              >
+                Launch Wizard Demo →
+              </Link>
+            </div>
+          </div>
+
+          {/* Comparison Notes */}
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 md:p-8">
+            <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4">
+              🔍 UX Comparison Notes
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-semibold text-gray-800 mb-3">Sidebar Navigation Benefits</h4>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>• Familiar desktop application pattern</li>
+                  <li>• Quick navigation between any step</li>
+                  <li>• Constant visibility of all sections</li>
+                  <li>• Efficient for power users</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-800 mb-3">Wizard Style Benefits</h4>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>• Clear linear progression</li>
+                  <li>• Less cognitive load per step</li>
+                  <li>• Better mobile experience</li>
+                  <li>• Visual guidance and feedback</li>
+                </ul>
               </div>
             </div>
           </div>
