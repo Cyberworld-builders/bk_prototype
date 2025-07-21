@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 interface StepData {
   id: number
@@ -145,15 +146,17 @@ export default function PropertyQuestionnaire() {
         </svg>
       </button>
 
-      {/* Logo - responsive sizing */}
-      <Image
-        src="/bk_logo.png"
-        alt="BK Assistant Logo"
-        width={150}
-        height={60}
-        priority
-        className="h-8 md:h-12 w-auto"
-      />
+      {/* Logo - responsive sizing with navigation */}
+      <Link href="/" className="transition-opacity hover:opacity-80">
+        <Image
+          src="/bk_logo.png"
+          alt="BK Assistant Logo"
+          width={150}
+          height={60}
+          priority
+          className="h-8 md:h-12 w-auto cursor-pointer"
+        />
+      </Link>
 
       {/* Progress - responsive layout */}
       <div className="text-xs md:text-sm text-gray-800 font-medium">
